@@ -43,6 +43,7 @@ export default function Home() {
   }
 
   function handleDrag(draggedFromIndex: number) {
+    hideMenu();
     setDraggedFromIndex(draggedFromIndex);
   }
 
