@@ -45,7 +45,7 @@ export default function FormPage({ icon, name, index }: { icon: string, name: st
       style={selected ? { boxShadow: `0px 1px 3px 0px ${focused ? '#2f72e2' : '#e5e7eb'}` } : undefined}
       className={`flex border-2 ${selected && focused ? 'border-[#2f72e2]' : 'border-gray-200'} rounded-lg items-center px-2 ${selected ? ' bg-white' : hover ? ' bg-gray-300' : ' bg-gray-200'}`}
     >
-      <Image src={`${icon}${selected ? '-selected' : ''}.png`} alt="form page icon" width="20" height="20" className="h-min" />
+      <Image src={`${icon}${selected ? '-selected' : ''}.png`} alt="form page icon" width="20" height="20" className="h-min pointer-events-none" />
       <p className={`ml-2 my-1 ${selected ? 'text-black' : 'text-gray-700'}`}>{name}</p>
       {selected && !focused && <Image src="/menu.png" alt="menu icon" width="20" height="20" className="h-min ml-4" />}
     </button>
